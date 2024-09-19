@@ -321,16 +321,12 @@ nav .nav-logo a {
     font-size: 0.9rem; /* Responsive font size */
   }
 }
-
 .slider-container {
   width: 90%;
   margin: 2rem auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-top: 5%;
-  padding-bottom: 5%;
-
 }
 
 .slider-content {
@@ -338,55 +334,62 @@ nav .nav-logo a {
   max-width: 90%;
   margin-left: 7%;
   text-transform: uppercase;
+  
 }
 
 .slider-content h2 {
   color: #fff;
   font-weight: 900;
   font-size: 3rem;
+  margin-bottom: 4rem;
+  margin-top: 3rem;
 }
 
+/* Movie Grid */
 .image-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  overflow-x: auto;
+  display: flex; /* Change to flex for the desired layout */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Space out cards */
   padding: 1rem;
-
+  
 }
 
 .cards {
-  width: 200px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  width: calc(20% - 2rem); /* Adjust to 4 cards per row with some spacing */
+  margin-bottom: 5rem;
 }
 
 .cards .card-img {
-  width: 100%;
-  height: 250px;
+  height: 200px; 
   overflow: hidden;
-  margin-top: 3rem;
+  border-radius: 0.5em;
 }
 
 .cards img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-}
-
-.cards:hover img{
-  cursor: pointer;
-  opacity: 0.3;
-  transition: 0.4s ease-in-out;
+  object-fit: cover;
 }
 
 .card-title h3 {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 500;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .image-row {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    grid-template-columns: 1fr; /* 1 item per row on very small screens */
+  }
+
+  .card-title h3 {
+    font-size: 0.5rem;
+  }
 }

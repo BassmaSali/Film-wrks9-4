@@ -1,5 +1,5 @@
 const apiKey = "407f47bc84851cff2dbcfd732a7719db";
-const apiUrl = 'https://api.themoviedb.org/3/movie/now_playing?language=en_US&page=1&api_key=${apiKey}';
+const apiUrl = `https://api.themoviedb.org/3/movie/now_playing?language=en_US&page=1&api_key=${apiKey}`;
 const movieContainer = document.getElementById("movies");
 
 async function fetchMovies() {
@@ -7,29 +7,40 @@ async function fetchMovies() {
     const response = await fetch(apiUrl);
     const data = await response.json();
 
-    moviesContainer.innerHTML = "";
+    movieContainer.innerHTML = ""; // Corrected to movieContainer
 
-    data.results.forEach(media => {
+    data.results.slice(0, 12).forEach(media => {
       const movieCard = createMovieCard(media);
-      moviesContainer.appendChild(movieCard);
+      movieContainer.appendChild(movieCard);
     });
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 }
 
-function createMovieCard(media) {
-  const { title, name, backdrop_path } = media;
+function createMovieCard(movie) {
+  const { title, backdrop_path } = movie;
+  const imgUrl = `https://image.tmdb.org/t/p/w500${backdrop_path}`; // Correct URL format
 
   const movieCard = document.createElement("div");
-  movieCard.classList.add("movie_item")
+  movieCard.classList.add("cards");
 
   movieCard.innerHTML = `
-    <img src="https://image.tmdb.org/t/p/w500/${backdrop_path}" class="movie_img_rounded">
-    <div class = "title">$(title || name)</div>
+    <div class="card-img">
+      <img src="${imgUrl}" alt="${title}">
+    </div>
+    <div class="card-title">
+      <h3>${title}</h3>
+    </div>
   `;
+
   return movieCard;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetchMovies(); // Ensure this is called after DOM is loaded
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
   splitTextIntoSpans(".logo a");
@@ -132,5 +143,3 @@ function animateText() {
     }, 3000); // 3-second delay before switching from image to video
   }, 300); // Initial delay before starting the animations
 }
-
-fetchMovies();
