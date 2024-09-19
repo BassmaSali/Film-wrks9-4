@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmworks | Cinema Listing & Latest Films</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a3faa085b7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <a href="#">Filmworks.</a>
+      </div>
+      <div class="menu">
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Cinemas</a></li>
+          <li><a href="#">What's On</a></li>
+          <li><a href="#">Coming Soon</a></li>
+          <li><a href="#">Book Tickets</a></li>
+        </ul>
+      </div>
+      <div class="user">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <img class="hero-image" src="../img/bg/spiderman.jpeg" alt="" />
+      <video class="hero-video" muted>
+        <source
+          src="../img/bg/SPIDER-MAN_ ACROSS THE SPIDER-VERSE Clip - Gwen & Miles.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <div class="hero-copy">
+      <h1>spiderman: Across the Spider-Verse</h1>
+      <div class="movie-details">
+        <p class="playing">Now Playing</p>
+        <p>PG ∙ Animation, Adventure, Action, Sci-fi ∙2h 20m</p>
+        <p class="description">
+          Miles Morales catapults across the multiverse, where he encounters a
+          team of Spider-People charged with protecting its very existence. When
+          the heroes clash on how to handle a new threat, Miles must redefine
+          what it means to be a hero.
+        </p>
+      </div>
+      <button class="book-tickets">Book Tickets</button>
+    </div>
+    <div class="slider-container">
+      <div class="slider-content">
+        <h2>Now Playing</h2>
+      </div>
+      <div class="image-row">
+        <div class="cards">
+          <a href="../html/movie-links/alien.html" class="alien-html">
+            <div class="card-img">
+              <img src="../img/films/alien.jpeg" alt="Alien" />
+            </div>
+            <div class="card-title">
+              <h3>Alien</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="cards">
+          <a href="../html/movie-links/blink-twice.html" class="blink-twice-html">
+            <div class="card-img">
+              <img src="../img/films/blink-twice.jpeg" alt="Blink Twice" />
+            </div>
+            <div class="card-title">
+              <h3>Blink Twice</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="cards">
+          <a href="../html/movie-links/deadpool-v-wolverine.html" class="deadpool-v-wolverine-html">
+            <div class="card-img">
+              <img
+                src="../img/films/deadpool-v-wolverine.jpeg"
+                alt="Deadpool V Wolverine"
+              />
+            </div>
+            <div class="card-title">
+              <h3>Deadpool V Wolverine</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="cards">
+          <a href="../html/movie-links/despicable-me4.html" class="despicable-me4-html">
+            <div class="card-img">
+              <img
+                src="../img/films/despicable-me4.jpeg"
+                alt="Despicable Me 4"
+              />
+            </div>
+            <div class="card-title">
+              <h3>Despicable Me 4</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="cards">
+          <a href="../html/movie-links/elemental.html" class="elemental-html">
+            <div class="card-img">
+              <img src="../img/films/elemental.jpeg" alt="Elemental" />
+            </div>
+            <div class="card-title">
+              <h3>Elemental</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <header class="header">
+        <div class="logo">
+          <h1>FILMWORKS</h1>
+        </div>
+        <div class="navBar">
+          <div class="open-btn" id="open">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="nav-items">
+            <ul class="list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Cinemas</a></li>
+              <li><a href="#">What's On</a></li>
+              <li><a href="#">Coming Soon</a></li>
+              <li><a href="#">Book Tickets</a></li>
+              <div class="close-btn" id="close">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </ul>
+            <ul class="user">
+              <li><i class="fa-solid fa-magnifying-glass"></i></li>
+              <li><i class="fa-solid fa-user"></i></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+  </body>
+</html>

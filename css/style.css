@@ -1,0 +1,392 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #0b1118;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background: grey;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  z-index: 55;
+}
+
+.container .header {
+  width: 100%;
+  height: 70px;
+  padding: 2rem 10%;
+  z-index: 55;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo h1 {
+  color: white;
+  font-size: 2.4rem;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.navBar .nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.navBar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navBar ul li a {
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition: color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+}
+
+.navBar ul li a:hover {
+  color: blue;
+}
+
+.navBar .user i {
+  font-size: 1.3rem;
+  color: white;
+  transition: color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+}
+
+.navBar .user i:hover {
+  color: blue;
+}
+
+.navBar .close-btn i {
+  font-size: 2.4rem;
+  color: white;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  display: none;
+}
+
+.header .navBar .open-btn {
+  position: absolute;
+  right: 4rem;
+  top: 1.5rem;
+  color: white;
+  font-size: 2rem;
+  display: none;
+} */
+
+/* ------------------------------------------------------------------------ */
+
+:root {
+  --color-accent: #0b1118;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  background: #0b1118;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav {
+  top: -200px;
+  width: 100%;
+  padding: 1.5em 3em;
+  background-color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+
+
+nav .nav-logo a {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: whitesmoke;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.menu ul.nav-items {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul.nav-items li a {
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+}
+
+.menu ul.nav-items li a:hover {
+  color: blue;
+}
+
+.user {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2em;
+}
+
+.user i {
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out;
+}
+
+.user i:hover {
+  color: blue;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero img,
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in;
+}
+
+.hero img {
+  opacity: 0.4;
+  z-index: 1;
+  transform: scale(2);
+}
+
+.hero video {
+  opacity: 0;
+  z-index: 0;
+}
+
+.hero-copy {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 40%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to truly center */
+  text-align: left; /* Center text */
+  color: whitesmoke;
+  max-width: 90%;
+  padding: 1em;
+  z-index: 3;
+}
+
+/* Title */
+.hero-copy h1 {
+  font-size: 4rem; /* Adjust for responsiveness */
+  line-height: 1.2;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1em; /* Space below title */
+}
+
+.hero-copy h1 .letter-span {
+  position: relative;
+  top: 100vw;
+}
+
+/* Movie Details */
+.hero-copy .movie-details {
+  opacity: 0; /* Hidden initially */
+  transition: opacity 1.5s ease-in; /* Fade-in effect */
+  font-size: 1.2rem; /* Adjust font size */
+  line-height: 1.6;
+  font-weight: 400;
+  margin-top: 1em; /* Space above details */
+}
+
+.hero-copy .playing {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.5rem; /* Larger font size */
+  margin-bottom: 0.5em; /* Space below */
+}
+
+.hero-copy .description {
+  font-size: 1rem; /* Slightly smaller font size */
+  margin-top: 0.5em; /* Space above description */
+}
+
+/* Book Tickets Button */
+.book-tickets {
+  margin-top: 2em; /* Space above button */
+  padding: 0.8em 1.5em; /* Button padding */
+  font-size: 1rem; /* Font size */
+  font-weight: 700;
+  color: #fff;
+  background-color: #0b1118; /* Button color */
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer; /* Smooth color transition */
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+
+.book-tickets:hover {
+  background-color: blue; /* Darker color on hover */
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .hero-copy h1 {
+    font-size: 2rem; /* Responsive font size */
+  }
+
+  .hero-copy .movie-details {
+    font-size: 1rem; /* Responsive font size */
+  }
+
+  .hero-copy .playing {
+    font-size: 1.2rem; /* Responsive font size */
+  }
+
+  .hero-copy .description {
+    font-size: 0.9rem; /* Responsive font size */
+  }
+}
+
+.slider-container {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+}
+
+.slider-content {
+  text-align: left;
+  max-width: 90%;
+  margin-left: 7%;
+  text-transform: uppercase;
+}
+
+.slider-content h2 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+
+}
+
+.cards {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.cards .card-img {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.cards img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cards:hover img{
+  cursor: pointer;
+  opacity: 0.3;
+  transition: 0.4s ease-in-out;
+}
+
+.card-title h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
