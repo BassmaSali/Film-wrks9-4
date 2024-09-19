@@ -160,8 +160,6 @@ nav {
   z-index: 2;
 }
 
-
-
 nav .nav-logo a {
   text-transform: uppercase;
   font-size: 1.8rem;
@@ -322,27 +320,38 @@ nav .nav-logo a {
   }
 }
 .slider-container {
-  width: 90%;
+  width: 80%;
   margin: 2rem auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-
-.slider-content {
-  text-align: left;
-  max-width: 90%;
-  margin-left: 7%;
-  text-transform: uppercase;
-  
-}
-
-.slider-content h2 {
+.slider-container h2 {
+  display: flex;
   color: #fff;
   font-weight: 900;
   font-size: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   margin-top: 3rem;
+  width: 100%;
+  position: relative;
+}
+
+.slider-container h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  right: 0;
+  height: 0.5em;
+  border-top: 3px solid rgb(255, 255, 255);
+  z-index: -1;
+}
+
+.slider-content {
+  text-align: left;
+  max-width: 100%;
+  text-transform: uppercase;
 }
 
 /* Movie Grid */
@@ -351,16 +360,15 @@ nav .nav-logo a {
   flex-wrap: wrap; /* Allow wrapping */
   justify-content: space-between; /* Space out cards */
   padding: 1rem;
-  
 }
 
 .cards {
-  width: calc(20% - 2rem); /* Adjust to 4 cards per row with some spacing */
+  width: calc(25% - 1rem); /* Adjust to 4 cards per row with some spacing */
   margin-bottom: 5rem;
 }
 
 .cards .card-img {
-  height: 200px; 
+  height: 200px;
   overflow: hidden;
   border-radius: 0.5em;
 }
@@ -369,6 +377,12 @@ nav .nav-logo a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.cards:hover img {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: 0.3s ease-in-out;
 }
 
 .card-title h3 {
@@ -380,7 +394,10 @@ nav .nav-logo a {
 
 @media (max-width: 1024px) {
   .image-row {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 items per row on smaller screens */
   }
 }
 

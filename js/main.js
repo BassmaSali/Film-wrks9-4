@@ -9,7 +9,7 @@ async function fetchMovies() {
 
     movieContainer.innerHTML = ""; // Corrected to movieContainer
 
-    data.results.slice(0, 12).forEach(media => {
+    data.results.slice(0, 8).forEach(media => {
       const movieCard = createMovieCard(media);
       movieContainer.appendChild(movieCard);
     });
