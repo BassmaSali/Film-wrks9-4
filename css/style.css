@@ -1,130 +1,3 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  width: 100%;
-  font-family: "Josefin Sans", sans-serif;
-  background-color: #0b1118;
-}
-
-::-webkit-scrollbar {
-  width: 18px;
-}
-
-::-webkit-scrollbar-track {
-  background: grey;
-}
-
-::-webkit-scrollbar-thumb {
-  background: white;
-}
-
-a {
-  text-decoration: none;
-}
-
-i {
-  cursor: pointer;
-}
-
-li {
-  list-style-type: none;
-}
-
-img {
-  cursor: pointer;
-}
-
-.container {
-  width: 100%;
-  height: 100vh;
-  z-index: 55;
-}
-
-.container .header {
-  width: 100%;
-  height: 70px;
-  padding: 2rem 10%;
-  z-index: 55;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header .logo h1 {
-  color: white;
-  font-size: 2.4rem;
-  cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.navBar .nav-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4rem;
-}
-
-.navBar ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.navBar ul li a {
-  color: white;
-  font-size: 1.15rem;
-  font-weight: 600;
-  transition: color 0.25s ease-in-out;
-  -webkit-transition: color 0.25s ease-in-out;
-  -moz-transition: color 0.25s ease-in-out;
-  -ms-transition: color 0.25s ease-in-out;
-  -o-transition: color 0.25s ease-in-out;
-}
-
-.navBar ul li a:hover {
-  color: blue;
-}
-
-.navBar .user i {
-  font-size: 1.3rem;
-  color: white;
-  transition: color 0.25s ease-in-out;
-  -webkit-transition: color 0.25s ease-in-out;
-  -moz-transition: color 0.25s ease-in-out;
-  -ms-transition: color 0.25s ease-in-out;
-  -o-transition: color 0.25s ease-in-out;
-}
-
-.navBar .user i:hover {
-  color: blue;
-}
-
-.navBar .close-btn i {
-  font-size: 2.4rem;
-  color: white;
-  position: absolute;
-  top: 2rem;
-  right: 3rem;
-  display: none;
-}
-
-.header .navBar .open-btn {
-  position: absolute;
-  right: 4rem;
-  top: 1.5rem;
-  color: white;
-  font-size: 2rem;
-  display: none;
-} */
-
-/* ------------------------------------------------------------------------ */
-
 :root {
   --color-accent: #0b1118;
 }
@@ -409,4 +282,31 @@ nav .nav-logo a {
   .card-title h3 {
     font-size: 0.5rem;
   }
+}
+
+
+
+/* Locations */
+
+.loc_bg {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.loc_bg img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in;
+}
+
+.hero img {
+  opacity: 0.4;
+  z-index: 1;
+  transform: scale(2);
 }
