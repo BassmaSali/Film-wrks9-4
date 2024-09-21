@@ -364,7 +364,7 @@ nav .nav-logo a {
 
 .cards2:hover img {
   cursor: pointer;
-  opacity: 0.3;
+  opacity: 0.8;
   transition: 0.3s ease-in-out;
 }
 
