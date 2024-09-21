@@ -9,7 +9,7 @@ async function fetchMovies() {
 
     movieContainer.innerHTML = ""; // Corrected to movieContainer
 
-    data.results.slice(0, 8).forEach(media => {
+    data.results.slice(0, 10).forEach(media => {
       const movieCard = createMovieCard(media);
       movieContainer.appendChild(movieCard);
     });
@@ -19,8 +19,8 @@ async function fetchMovies() {
 }
 
 function createMovieCard(movie) {
-  const { title, backdrop_path } = movie;
-  const imgUrl = `https://image.tmdb.org/t/p/w500${backdrop_path}`; // Correct URL format
+  const { title, poster_path, overview} = movie;
+  const imgUrl = `https://image.tmdb.org/t/p/w500${poster_path}`; // Correct URL format
 
   const movieCard = document.createElement("div");
   movieCard.classList.add("cards");
@@ -34,12 +34,30 @@ function createMovieCard(movie) {
     </div>
   `;
 
+  movieCard.addEventListener("click", () => {
+    window.location.href = `now-playing.html?title=${encodeURIComponent(title)}&poster=${encodeURIComponent(imgUrl)}&overview=${encodeURIComponent(overview)}`;
+  });
+
   return movieCard;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   fetchMovies(); // Ensure this is called after DOM is loaded
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const title = params.get('title');
+  const poster = params.get('poster');
+  const overview = params.get('overview');
+
+  document.getElementById("movie-title").textContent = title;
+  document.getElementById("movie-poster").src = poster;
+  document.getElementById("movie-overview").textContent = overview;
+  
+  // You can add more details as needed, e.g., duration, genre, etc.
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

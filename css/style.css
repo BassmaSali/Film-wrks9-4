@@ -58,7 +58,7 @@ nav .nav-logo a {
 }
 
 .menu ul.nav-items li a:hover {
-  color: blue;
+  color: lightsteelblue;
 }
 
 .user {
@@ -75,7 +75,7 @@ nav .nav-logo a {
 }
 
 .user i:hover {
-  color: blue;
+  color: lightsteelblue;
 }
 
 .hero {
@@ -135,61 +135,62 @@ nav .nav-logo a {
 
 /* Movie Details */
 .hero-copy .movie-details {
-  opacity: 0; /* Hidden initially */
-  transition: opacity 1.5s ease-in; /* Fade-in effect */
-  font-size: 1.2rem; /* Adjust font size */
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+  font-size: 1.2rem;
   line-height: 1.6;
   font-weight: 400;
-  margin-top: 1em; /* Space above details */
+  margin-top: 1em;
 }
 
 .hero-copy .playing {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1.5rem; /* Larger font size */
-  margin-bottom: 0.5em; /* Space below */
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
 }
 
 .hero-copy .description {
-  font-size: 1rem; /* Slightly smaller font size */
-  margin-top: 0.5em; /* Space above description */
+  font-size: 1rem;
+  margin-top: 0.5em;
 }
 
-/* Book Tickets Button */
+
 .book-tickets {
-  margin-top: 2em; /* Space above button */
-  padding: 0.8em 1.5em; /* Button padding */
-  font-size: 1rem; /* Font size */
+  margin-top: 2em;
+  padding: 0.8em 1.5em;
+  font-size: 1rem;
   font-weight: 700;
   color: #fff;
-  background-color: #0b1118; /* Button color */
+  background-color: #0b1118;
   border: none;
   border-radius: 0.3em;
-  cursor: pointer; /* Smooth color transition */
+  cursor: pointer;
   opacity: 0;
   transition: opacity 1.5s ease-in;
 }
 
 .book-tickets:hover {
-  background-color: blue; /* Darker color on hover */
+  background-color: lightsteelblue;
   transition: 0.3s ease-in-out;
+  color: black;
 }
 
 @media (max-width: 768px) {
   .hero-copy h1 {
-    font-size: 2rem; /* Responsive font size */
+    font-size: 2rem;
   }
 
   .hero-copy .movie-details {
-    font-size: 1rem; /* Responsive font size */
+    font-size: 1rem;
   }
 
   .hero-copy .playing {
-    font-size: 1.2rem; /* Responsive font size */
+    font-size: 1.2rem; 
   }
 
   .hero-copy .description {
-    font-size: 0.9rem; /* Responsive font size */
+    font-size: 0.9rem; 
   }
 }
 .slider-container {
@@ -210,6 +211,18 @@ nav .nav-logo a {
   position: relative;
 }
 
+.slider-container h3 {
+  color: grey;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+  width: 100%;
+  font-weight: 700;
+}
+
+.slider-content p{
+  color: white;
+}
+
 .slider-container h2:after {
   content: "";
   position: absolute;
@@ -224,24 +237,23 @@ nav .nav-logo a {
 .slider-content {
   text-align: left;
   max-width: 100%;
-  text-transform: uppercase;
 }
 
 /* Movie Grid */
 .image-row {
-  display: flex; /* Change to flex for the desired layout */
-  flex-wrap: wrap; /* Allow wrapping */
-  justify-content: space-between; /* Space out cards */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 1rem;
 }
 
 .cards {
-  width: calc(25% - 1rem); /* Adjust to 4 cards per row with some spacing */
+  width: calc(19% - 1rem);
   margin-bottom: 5rem;
 }
 
 .cards .card-img {
-  height: 200px;
+  height: 350px;
   overflow: hidden;
   border-radius: 0.5em;
 }
@@ -263,20 +275,22 @@ nav .nav-logo a {
   font-size: 1.2rem;
   font-weight: 500;
   margin-top: 1rem;
+  text-transform: uppercase;
 }
+
 
 @media (max-width: 1024px) {
   .image-row {
     grid-template-columns: repeat(
       2,
       1fr
-    ); /* 2 items per row on smaller screens */
+    );
   }
 }
 
 @media (max-width: 768px) {
   .image-row {
-    grid-template-columns: 1fr; /* 1 item per row on very small screens */
+    grid-template-columns: 1fr;
   }
 
   .card-title h3 {
@@ -302,11 +316,209 @@ nav .nav-logo a {
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity 1s ease-in;
 }
 
-.hero img {
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
   opacity: 0.4;
-  z-index: 1;
-  transform: scale(2);
+  transition: .5s ease;
+  background-color: black;
+}
+
+.loc_bg h2{
+  color: lightsteelblue;
+  opacity: 1;
+  font-size: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.cards2 {
+  width: calc(25% - 1rem);
+  margin-bottom: 5rem;
+}
+
+.cards2 .card-img {
+  height: 150px;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+
+.cards2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards2:hover img {
+  cursor: pointer;
+  opacity: 0.3;
+  transition: 0.3s ease-in-out;
+}
+
+.cards2:hover .card-img{
+height: 300px;
+transition: 0.6s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .image-row {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    );
+  }
+}
+
+@media (max-width: 768px) {
+  .image-row {
+    grid-template-columns: 1fr;
+  }
+
+  .card-title h3 {
+    font-size: 0.5rem;
+  }
+}
+
+.card-title2 h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.card-title2 p {
+  color: grey;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.membership {
+  background-color: lightsteelblue;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1300px;
+}
+
+.membership-content {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.membership-image {
+  width: 300px;
+  height: 200px;
+  margin-right: 90px;
+  border-radius: 10px;
+}
+
+.membership-text {
+  max-width: 500px;
+}
+
+.membership-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.membership-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.join-now {
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.join-now:hover {
+  background-color: grey;
+  transition: 0.4s ease-in-out;
+  color: white;
+  font-weight: 700;
+}
+
+
+
+
+/* Booking */
+.booking-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.poster {
+  padding-right: 40px;
+}
+
+.poster img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.movie-info {
+  flex: 2;
+  color: white;
+}
+
+.movie-info h1 {
+  margin: 60px 0 60px;
+  font-size: 4rem;
+}
+
+.movie-info p {
+  margin: 5px 0 60px;
+  line-height: 1.5;
+  font-size: 19px;
+}
+
+.book-tickets2 {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.book-tickets2:hover {
+  background: #218838;
+}
+
+@media (max-width: 768px) {
+  .booking-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .poster {
+      padding: 0;
+      margin-bottom: 20px;
+  }
 }
